@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 15% 92%;
+    --foreground: 345 50% 28%;
+
+    --card: 220 12% 88%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 220 12% 88%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 345 60% 32%;
+    --primary-foreground: 40 20% 95%;
+
+    --secondary: 40 55% 50%;
+    --secondary-foreground: 240 10% 6%;
+
+    --muted: 220 10% 85%;
+    --muted-foreground: 345 35% 38%;
+
+    --accent: 210 70% 45%;
+    --accent-foreground: 210 100% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 6% 18%;
+    --input: 240 6% 18%;
+    --ring: 345 60% 32%;
+
+    --radius: 0.75rem;
+
+    /* Hub ecosystem tokens */
+    --wine: 345 60% 32%;
+    --wine-glow: 345 70% 42%;
+    --gold: 40 55% 50%;
+    --gold-glow: 40 70% 60%;
+    --hub-blue: 210 70% 45%;
+    --hub-blue-glow: 210 80% 55%;
+    --hub-green: 120 55% 38%;
+    --hub-green-glow: 120 60% 45%;
+
+    --node-bg: 220 12% 78%;
+    --node-border: 220 10% 68%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(345 60% 32% / 0.15), hsl(210 70% 45% / 0.1), hsl(40 55% 50% / 0.08));
+    --gradient-wine: linear-gradient(135deg, hsl(345 60% 32%), hsl(345 70% 42%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 55% 50%), hsl(40 70% 60%));
+    --gradient-blue: linear-gradient(135deg, hsl(210 70% 45%), hsl(210 80% 55%));
+    --gradient-green: linear-gradient(135deg, hsl(145 55% 40%), hsl(145 65% 50%));
+
+    --shadow-wine: 0 0 40px hsl(345 60% 32% / 0.3);
+    --shadow-gold: 0 0 40px hsl(40 55% 50% / 0.3);
+    --shadow-blue: 0 0 40px hsl(210 70% 45% / 0.3);
+    --shadow-green: 0 0 40px hsl(145 55% 40% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer components {
+  .node-card {
+    @apply rounded-2xl border p-6 backdrop-blur-sm;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .node-card:hover {
+    transform: scale(1.05);
+  }
+
+  .node-card--wine {
+    background: hsl(345 60% 95%);
+    border-color: hsl(345 50% 82%);
+  }
+  .node-card--wine:hover {
+    border-color: hsl(var(--wine-glow));
+    box-shadow: var(--shadow-wine);
+  }
+
+  .node-card--blue {
+    background: hsl(210 70% 94%);
+    border-color: hsl(210 50% 82%);
+  }
+  .node-card--blue:hover {
+    border-color: hsl(var(--hub-blue-glow));
+    box-shadow: var(--shadow-blue);
+  }
+
+  .node-card--green {
+    background: hsl(120 45% 93%);
+    border-color: hsl(120 40% 80%);
+  }
+  .node-card--green:hover {
+    border-color: hsl(var(--hub-green-glow));
+    box-shadow: var(--shadow-green);
+  }
+
+  .glow-line {
+    background: linear-gradient(90deg, transparent, hsl(var(--gold) / 0.4), transparent);
+    height: 1px;
+  }
+
+  .network-dot {
+    @apply absolute rounded-full;
+    background: hsl(var(--gold) / 0.15);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .btn-ecosystem {
+    @apply inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all duration-300;
+  }
+
+  .btn-ecosystem--wine {
+    background: var(--gradient-wine);
+    @apply text-primary-foreground;
+  }
+
+  .btn-ecosystem--blue {
+    background: var(--gradient-blue);
+    @apply text-accent-foreground;
+  }
+
+  .btn-ecosystem--green {
+    background: var(--gradient-green);
+    color: hsl(145 100% 97%);
+  }
+
+  .btn-ecosystem:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+  }
+
+  .mascot-bubble {
+    @apply rounded-xl border border-node-border bg-node px-4 py-3 text-sm;
+    box-shadow: 0 8px 32px hsl(var(--wine) / 0.15);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes data-flow {
+  0% { stroke-dashoffset: 1000; }
+  100% { stroke-dashoffset: 0; }
+}
