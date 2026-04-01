@@ -26,7 +26,7 @@ const solutions = [
   },
   {
     name: "UPiD<br />Inteligência Digital",
-    description: "Transforme seu WhatsApp em uma máquina de vendas que funciona todos os dias.",
+    description: "Transformamos sua operação comercial em uma máquina de crescimento previsível, estruturando toda a jornada do cliente.",
     link: "https://upid.tec.br/",
     color: "blue" as const,
     icon: "🔵 Digital",
