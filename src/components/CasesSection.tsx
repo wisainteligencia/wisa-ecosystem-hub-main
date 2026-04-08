@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, TrendingUp } from "lucide-react";
 
-const CASES_URL = "https://casesdesucesso.upid.tec.br/";
+const CASES_URL = "https://portfolio.upid.tec.br/";
 
 const cases = [
   {

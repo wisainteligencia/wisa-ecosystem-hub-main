@@ -40,6 +40,15 @@ const HubHero = () => {
         Organize sua empresa. Aumente suas vendas. Cresça com previsibilidade.
       </motion.p>
 
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7, duration: 0.6 }}
+        className="mt-3 text-sm text-slate-500 max-w-lg mx-auto"
+      >
+        Agora com QG físico para atender clientes, parceiros e novos projetos com mais proximidade.
+      </motion.p>
+
       {/* CTAs */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

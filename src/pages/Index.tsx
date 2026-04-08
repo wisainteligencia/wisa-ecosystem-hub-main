@@ -1,6 +1,7 @@
 import bgLanding from "@/assets/bg-landing.jpg";
 import NetworkBackground from "@/components/NetworkBackground";
 import HubHero from "@/components/HubHero";
+import TopBar from "@/components/TopBar";
 import PainSection from "@/components/PainSection";
 import CtaSection from "@/components/CtaSection";
 import SolutionTransition from "@/components/SolutionTransition";
@@ -8,12 +9,15 @@ import EcosystemNode from "@/components/EcosystemNode";
 import ConnectionLines from "@/components/ConnectionLines";
 import AuthoritySection from "@/components/AuthoritySection";
 import CasesSection from "@/components/CasesSection";
+import HQSection from "@/components/HQSection";
+import MapSection from "@/components/MapSection";
 import MascotIsa from "@/components/MascotIsa";
 import { motion } from "framer-motion";
 import logoWisaConsultoria from "@/assets/logo-wisa-consultoria.png";
 import logoUpid from "@/assets/logo-upid.png";
 import logoPed from "@/assets/logo-ped.png";
 import logoVestigio from "@/assets/logo-vestigio.png";
+import wisaLogo from "@/assets/logo-wisa.png";
 
 const solutions = [
   {
@@ -61,6 +65,9 @@ const Index = () => {
       <NetworkBackground />
 
       <div className="relative z-10">
+        {/* Top Bar */}
+        <TopBar />
+        
         {/* 1. HERO */}
         <HubHero />
 
@@ -118,7 +125,13 @@ const Index = () => {
         {/* 7. AUTHORITY */}
         <AuthoritySection />
 
-        {/* 8. FINAL CTA */}
+        {/* 8. HQ SECTION */}
+        <HQSection />
+
+        {/* 9. MAP SECTION */}
+        <MapSection />
+
+        {/* 10. FINAL CTA */}
         <CtaSection
           title="Pare de trabalhar no escuro"
           subtitle="Descubra onde sua empresa está perdendo dinheiro e como organizar isso de forma simples."
@@ -128,10 +141,43 @@ const Index = () => {
         />
 
         {/* Footer */}
-        <footer className="border-t border-border px-6 py-10 text-center">
-          <p className="text-xs text-muted-foreground">
-            © 2026 Hub Wisa — Inteligência · Integração · Crescimento
-          </p>
+        <footer className="px-6 py-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col items-center justify-center gap-8">
+              {/* Logo */}
+              <div className="flex flex-col items-center">
+                <img src={wisaLogo} alt="WiSa" className="h-20 w-auto" />
+              </div>
+              
+              {/* Endereço */}
+              <div className="text-center">
+                <p className="text-sm text-wine/80">📍 R. Ana Bernardino Veloso, 3</p>
+                <p className="text-sm text-wine/60">Centro, Santa Cruz de Minas - MG</p>
+              </div>
+              
+              {/* WhatsApp */}
+              <div className="text-center">
+                <a 
+                  href="https://wa.me/553231980374" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-hub-green hover:text-hub-green/80 transition-colors"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.297-.347.446-.52.149-.173.074-.347.037-.446-.025-.099-.062-1.173-.581-2.342-1.498-.87-.672-1.461-1.502-1.634-1.799-.173-.297-.018-.458.124-.606.124-.124.273-.347.446-.52.149-.173.223-.297.247-.471.149-.173-.149-.67-.247-1.277-.483-.607-.237-1.277-.446-1.634-.496-.357-.05-.69-.05-.973.05-.283.099-.67.273-.973.543-.304.27-.496.543-.496.543s-1.098 1.502-.496 2.893c.602 1.391 1.098 2.39 2.342 3.634s2.243 1.736 3.634 2.338c1.391.602 2.39.149 2.893-.496s.496-1.098.496-1.098.173-.273.496-.496c.322-.223.67-.322.973-.543.304-.223.421-.446.496-.67.074-.223.074-.421.025-.496-.05-.074-.149-.124-.446-.273z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                  </svg>
+                  (32) 3198-0374
+                </a>
+              </div>
+            </div>
+            
+            <div className="mt-8 pt-6 border-t border-wine/20 text-center">
+              <p className="text-xs text-wine/60">
+                © 2026 Hub Wisa — Inteligência · Integração · Crescimento
+              </p>
+            </div>
+          </div>
         </footer>
       </div>
 
