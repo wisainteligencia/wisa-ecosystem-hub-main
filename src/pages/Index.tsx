@@ -72,6 +72,7 @@ const Index = () => {
         {/* 1. HERO */}
         <HubHero />
 
+        
         {/* 2. PAIN SECTION */}
         <PainSection />
 
@@ -141,6 +142,7 @@ const Index = () => {
           variant="final"
         />
 
+        
         {/* 9. RSS FEED */}
         <RSSFeed />
 
