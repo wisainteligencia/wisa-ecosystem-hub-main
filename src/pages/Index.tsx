@@ -11,6 +11,7 @@ import AuthoritySection from "@/components/AuthoritySection";
 import CasesSection from "@/components/CasesSection";
 import HQSection from "@/components/HQSection";
 import MapSection from "@/components/MapSection";
+import RSSFeed from "@/components/RSSFeed";
 import MascotIsa from "@/components/MascotIsa";
 import { motion } from "framer-motion";
 import logoWisaConsultoria from "@/assets/logo-wisa-consultoria.png";
@@ -139,6 +140,9 @@ const Index = () => {
           whatsappNote="Ou fale no WhatsApp"
           variant="final"
         />
+
+        {/* 9. RSS FEED */}
+        <RSSFeed />
 
         {/* Footer */}
         <footer className="px-6 py-8">
