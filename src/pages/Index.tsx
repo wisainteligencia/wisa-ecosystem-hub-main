@@ -182,29 +182,31 @@ const Index = () => {
             </div>
             
             <div className="mt-8 pt-6 border-t border-wine/20 text-center">
+              <div className="mb-4 flex items-center justify-center gap-4">
+                <a
+                  href="https://www.instagram.com/hubwisa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-wine/60 hover:text-wine transition-colors"
+                >
+                  <Instagram size={20} />
+                </a>
+
+                <a
+                  href="https://www.facebook.com/hubwisa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="text-wine/60 hover:text-wine transition-colors"
+                >
+                  <Facebook size={20} />
+                </a>
+              </div>
+
               <p className="text-xs text-wine/60">
                 © 2026 WiSa Inteligência para Negócios — Organização · Estrutura · Crescimento
               </p>
-              
-              <a
-              href="https://www.instagram.com/hubwisa"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label= "Instagram"
-              className="hover:text-primary transition-colors"
-              >
-                <Instagram size={20} />
-              </a>
-
-              <a
-              href="https://www.facebook.com/hubwisa"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label= "Facebook"
-              className="hover:text-primary transition-colors"
-              >
-                <Facebook size={20} />
-              </a>
             </div>
           </div>
         
