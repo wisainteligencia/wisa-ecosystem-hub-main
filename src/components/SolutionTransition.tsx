@@ -13,7 +13,7 @@ const SolutionTransition = () => {
           Você não precisa de mais esforço. Precisa da estrutura certa.
         </h2>
         <p className="text-muted-foreground text-base leading-relaxed">
-          O Hub WiSa conecta organização, vendas e capacitação para transformar empresas desorganizadas em operações estruturadas e lucrativas.
+          A WiSa Inteligência para Negócios conecta organização, vendas e capacitação para transformar empresas desorganizadas em operações estruturadas e lucrativas.
         </p>
 
         <motion.div

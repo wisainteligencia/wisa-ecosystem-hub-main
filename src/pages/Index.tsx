@@ -180,7 +180,7 @@ const Index = () => {
             
             <div className="mt-8 pt-6 border-t border-wine/20 text-center">
               <p className="text-xs text-wine/60">
-                © 2026 Hub Wisa — Inteligência · Integração · Crescimento
+                © 2026 WiSa Inteligência para Negócios — Organização · Estrutura · Crescimento
               </p>
             </div>
           </div>
