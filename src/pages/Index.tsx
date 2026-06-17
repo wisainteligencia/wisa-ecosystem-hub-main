@@ -19,6 +19,9 @@ import logoUpid from "@/assets/logo-upid.png";
 import logoPed from "@/assets/logo-ped.png";
 import logoVestigio from "@/assets/logo-vestigio.png";
 import wisaLogo from "@/assets/logo-wisa.png";
+import React from "react";
+import { Instagram, Facebook } from "lucide-react";
+
 
 const solutions = [
   {
@@ -182,8 +185,29 @@ const Index = () => {
               <p className="text-xs text-wine/60">
                 © 2026 WiSa Inteligência para Negócios — Organização · Estrutura · Crescimento
               </p>
+              
+              <a
+              href="https://www.instagram.com/hubwisa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label= "Instagram"
+              className="hover:text-primary transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
+
+              <a
+              href="https://www.facebook.com/hubwisa"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label= "Facebook"
+              className="hover:text-primary transition-colors"
+              >
+                <Facebook size={20} />
+              </a>
             </div>
           </div>
+        
         </footer>
       </div>
 
