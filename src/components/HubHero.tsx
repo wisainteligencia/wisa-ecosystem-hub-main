@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Calendar, MessageCircle } from "lucide-react";
 import wisaLogo from "@/assets/logo-wisa.png";
 
-const CALENDAR_URL = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ10baEhf2nfYpW2ekiKDw0qe5z_NCfTWJVTiWxzGMgfiazjT929J3HWw0iTm09Qo7cWhZJbFSTT";
+const CALENDAR_URL = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2qc9MFGzl1mCicH3-iZhkmYc3xCDAXOh1giUcARXxPg0e48eNNzHckPILnGdSMNKyHvUc-ijCy";
 const WHATSAPP_URL = "https://wa.me/553231980374?text=Olá,%20vim%20pelo%20site%20da%20WiSa%20e%20quero%20entender%20melhor%20como%20funciona";
 
 const HubHero = () => {
